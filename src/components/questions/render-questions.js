@@ -25,10 +25,10 @@ export default function RenderQuestions (props) {
     const [start, setStart] = useState(false);
     const [finishGame, setFinishGame] = useState(false);
 
-    let itemsArray = localStorage.getItem('value') ? JSON.parse(localStorage.getItem('value')) : [];    
-    localStorage.setItem('value', JSON.stringify(itemsArray));
-    const data = JSON.parse(localStorage.getItem('value'));
-
+    let itemsArray = localStorage.getItem('value') ? JSON.parse(localStorage.getItem('value')) : []; // Basically, i decided to put the right questions 
+    localStorage.setItem('value', JSON.stringify(itemsArray));                                      //  in the local storage and retrieve it when the game is finished
+    const data = JSON.parse(localStorage.getItem('value'));                                        //   to users see how many questions they answered correctly.
+                                                                                                  //    That's the best way i found to do it.  
     useEffect(() => {
         (
         async () => {
