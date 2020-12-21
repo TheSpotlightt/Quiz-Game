@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.css';
+
+import Home from './pages/home/home';
+import GeneralKnowledge from './pages/general-knowledge/general-knowledge';
+import Geography from './pages/geography/geography';
+import History from './pages/history/history';
+import Mythology from './pages/mythology/mythology';
+import Books from './pages/Entertainment/books';
+import Film from './pages/Entertainment/film';
+import Music from './pages/Entertainment/music';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+      
+        <Route path='/' component={Home} exact />
+        <Route path='/GeneralKnowledge' component={GeneralKnowledge} />
+        <Route path='/Geography' component={Geography} />
+        <Route path='/History' component={History} />
+        <Route path='/Mythology' component={Mythology} />
+        <Route path='/Books' component={Books} />
+        <Route path='/Film' component={Film} />
+        <Route path='/Music' component={Music} />
+
+      </Switch>
+    </Router>
   );
 }
 
