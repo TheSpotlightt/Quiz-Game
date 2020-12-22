@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/home/home';
-import GeneralKnowledge from './pages/general-knowledge';
+import GeneralKnowledge from './pages/general-knowledge/general-knowledge';
 import Geography from './pages/geography/geography';
 import History from './pages/history/history';
 import Mythology from './pages/mythology/mythology';
