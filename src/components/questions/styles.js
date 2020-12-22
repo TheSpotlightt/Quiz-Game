@@ -43,7 +43,6 @@ export const AnswerButton = styled.button `
     padding: 1.5rem;
     font-size: 1.7rem;
     margin: 2rem;
-    color: #ffff;
     border-radius: 1.5rem;
     border: .1rem solid #2331b0;
     outline: none;
